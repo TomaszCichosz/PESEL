@@ -1,11 +1,9 @@
-package utils;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class InputUtils {
+class InputUtils {
 
-    public static String getPESEL() {
+    static String getPESEL() {
         Scanner scanner = new Scanner(System.in);
         String input;
         while (true) {
@@ -45,7 +43,7 @@ public class InputUtils {
         return input.length() == 11;
     }
 
-    public static int getInteger() {
+    static int getInteger() {
         Scanner scanner = new Scanner(System.in);
         int integer;
         while (true) {

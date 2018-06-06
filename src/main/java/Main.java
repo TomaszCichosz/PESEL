@@ -1,7 +1,3 @@
-import pesel.PESELUtils;
-import utils.InputUtils;
-
-
 public class Main {
 
     public static void main(String[] args) {
@@ -12,16 +8,16 @@ public class Main {
 
         while (!exit) {
             pesel = InputUtils.getPESEL();
-            peselTab = PESELUtils.stringToInts(pesel);
-            if (PESELUtils.peselChecker(peselTab)) {
+            peselTab = PESEL.stringToInts(pesel);
+            if (PESEL.peselChecker(peselTab)) {
                 System.out.println("PESEL valid");
             } else {
                 System.out.println("PESEL invalid");
             }
             System.out.println("Birthdate:");
-            System.out.println(PESELUtils.birthdateChecker(pesel));
+            System.out.println(PESEL.birthdateChecker(pesel));
             System.out.print("Gender: ");
-            if (PESELUtils.isFemale(pesel)) {
+            if (PESEL.isFemale(pesel)) {
                 System.out.println("female");
             } else {
                 System.out.println("male");

@@ -1,8 +1,6 @@
-package pesel;
+class PESEL {
 
-public class PESELUtils {
-
-    public static int[] stringToInts(String pesel) {
+    static int[] stringToInts(String pesel) {
         String[] peselTab = pesel.split("");
         int[] peselIntTab = new int[11];
         for (int i = 0; i < 11; i++) {
@@ -11,7 +9,7 @@ public class PESELUtils {
         return peselIntTab;
     }
 
-    public static boolean peselChecker(int[] peselTab) {
+    static boolean peselChecker(int[] peselTab) {
         int[] weightTab = {1, 3, 7, 9, 1, 3, 7, 9, 1, 3, 1};
         int checkSum = 0;
         for (int i = 0; i < 11; i++) {
@@ -28,7 +26,7 @@ public class PESELUtils {
         } else return 19;
     }
 
-    public static String birthdateChecker(String pesel) {
+    static String birthdateChecker(String pesel) {
         int century = birthCenturyChecker(pesel);
         String birthdate = Integer.toString(century);
         birthdate = birthdate.concat(pesel.substring(0, 2));
@@ -45,7 +43,7 @@ public class PESELUtils {
         return birthdate;
     }
 
-    public static boolean isFemale(String pesel) {
+    static boolean isFemale(String pesel) {
         return Character.getNumericValue(pesel.charAt(9)) % 2 == 0;
     }
 }
