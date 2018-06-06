@@ -1,16 +1,12 @@
 import pesel.PESELUtils;
 import utils.InputUtils;
 
-import java.util.Scanner;
-
 
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
         String pesel;
-        int decision;
         int[] peselTab;
         boolean exit = false;
 
@@ -30,9 +26,8 @@ public class Main {
             } else {
                 System.out.println("male");
             }
-            System.out.println("To exit type \"0\"");
-            decision = scanner.nextInt();
-            if (decision == 0) {
+            System.out.println("Exit type \"0\"");
+            if (InputUtils.getInteger() == 0) {
                 exit = true;
             }
         }

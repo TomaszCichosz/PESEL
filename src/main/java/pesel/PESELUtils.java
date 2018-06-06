@@ -20,7 +20,7 @@ public class PESELUtils {
         return checkSum % 10 == 0;
     }
 
-    public static int birthCenturyChecker(String pesel) {
+    private static int birthCenturyChecker(String pesel) {
         if (pesel.charAt(2) == '2' || pesel.charAt(2) == '3') {
             return 20;
         } else if (pesel.charAt(2) == '8' || pesel.charAt(2) == '9') {
